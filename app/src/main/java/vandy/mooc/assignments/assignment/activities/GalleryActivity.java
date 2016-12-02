@@ -38,6 +38,12 @@ import vandy.mooc.assignments.framework.utils.ViewUtils;
  * In assignment 3, the MainActivity constructs a starting intent containing the
  * displayed list of remote image URLs and then uses this intent to start this
  * GalleryActivity "for results". This activity is the required to ...
+ * <p/>
+ * Assignment 4:
+ * <p/>
+ * In assignment 4, the MainActivity constructs a starting intent containing the
+ * displayed list of remote image URLs and then uses this intent to start this
+ * GalleryActivity "for results". This activity is the required to ...
  */
 public class GalleryActivity
         extends GalleryActivityBase {
@@ -65,18 +71,23 @@ public class GalleryActivity
     public static Intent makeStartIntent(
             Context context,
             ArrayList<Uri> inputUrls) {
-        // TODO (A1,A2,A3): Create a new intent for starting this activity
+        // Create a new intent for starting this activity
         // using the passed context along with the class identifier
         // for this class.
-        
+        // TODO - you fill in here.
+		
 
-        // TODO (A1,A2,A3): Put the received list of input URLs as an intent
+        // Put the received list of input URLs as an intent
         // use putParcelableArrayListExtra(String, ArrayList<Uri>) on the intent
         // using the predefined INTENT_EXTRA_URLS extra name.
-        
+        // TODO - you fill in here.
+		
 
-        // TODO (A1,A2,A3): Return the intent.
-        
+        // Create a new intent for starting this activity
+        // using the passed context along with the class identifier
+        // for this class.
+        // TODO - you fill in here.
+		
     }
 
     /*
@@ -98,11 +109,11 @@ public class GalleryActivity
         if (savedInstanceState == null) {
             // The activity is being started for the first time.
 
-            // TODO (A1):
             // Call local help method to extract the URLs from the activity's
             // starting intent and pass these URLs into the super class using
             // the setItems() helper method.
-           
+            // TODO - you fill in here.
+			
         } else {
             // The activity is being recreated after configuration change.
             // You can restore your activity's saved state from the passed
@@ -121,12 +132,13 @@ public class GalleryActivity
      * @return A list of image URLs.
      */
     private List<Uri> extractInputUrlsFromIntent(Intent intent) {
-        // TODO (A1): First extract the list of input urls from the passed
+        // First extract the list of input urls from the passed
         // intent extras using the provided INTENT_EXTRA_URLS name string.
         // Next, validate the extracted list URL strings by calling the local
         // validateInput() helper method. If the entire list of received URLs
         // are valid, then return this list. Otherwise return null.
-        
+        // TODO - you fill in here.
+		
     }
 
     /**
@@ -138,7 +150,7 @@ public class GalleryActivity
      * first error encountered.
      */
     private boolean validateInput(ArrayList<Uri> inputUrls) {
-        // TODO (A1,A2,A3): Validate the passed URL.
+        // Validate the passed URL.
         //
         // If the list is null call ViewUtils.showToast() to display the
         // string R.string.input_url_list_is_null.
@@ -147,15 +159,17 @@ public class GalleryActivity
         // to display the the string R.string.input_url_list_is_empty
         //
         // Otherwise check if each list entry is valid using the
-        // UriUtils.isValidUrl() helper and if any URL is not valid
+        // FileUtils.isValidUrl() helper and if any URL is not valid
         // return false.
         //
         // Return true if all the URLs are valid.
 
-       
+        // TODO - you fill in here.
+		
 
         // Input passed all tests, so return true.
-        
+        // TODO - you fill in here.
+		
     }
 
     /**

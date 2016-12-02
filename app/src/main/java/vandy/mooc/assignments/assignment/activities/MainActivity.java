@@ -57,8 +57,9 @@ public class MainActivity extends MainActivityBase {
      */
     @Override
     protected void startDownload(ArrayList<Uri> urls) {
-        // TODO (A1, A3): Start the Gallary Activity with the Uri(s) passsed in.
-        
+        // Start the Gallery Activity with the Uri(s) passed in.
+        // TODO - you fill in here.
+		
     }
 
     /**
@@ -70,6 +71,7 @@ public class MainActivity extends MainActivityBase {
      */
     @Override
     public void onShowRefresh(boolean notUsed) {
+        // nothing required for this assignment.
     }
 
 }

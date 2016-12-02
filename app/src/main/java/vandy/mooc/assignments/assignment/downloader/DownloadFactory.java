@@ -33,7 +33,7 @@ public final class DownloadFactory {
             Context context,
             Request request) {
 
-        // TODO A1,A2,A3,A4: Depending on 'policy' instantiate the appropriate Downloader instance
+        // Depending on 'policy' instantiate the appropriate Downloader instance
         Downloader downloader;
 
 
@@ -51,10 +51,10 @@ public final class DownloadFactory {
                 throw new IllegalArgumentException("Invalid download policy");
         }
 
-        // TODO A1,A2,A3,A4: for the new Downloader instance, set the Request to 'request'
+        // for the new Downloader instance, set the Request to 'request'
         downloader.setRequest(request);
 
-        // TODO A1,A2,A3,A4: return the new Downloader instance
+        // return the new Downloader instance
         return downloader;
     }
 }

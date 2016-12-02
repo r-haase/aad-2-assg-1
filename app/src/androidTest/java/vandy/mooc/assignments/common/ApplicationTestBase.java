@@ -8,6 +8,8 @@ import java.util.ArrayList;
 
 import vandy.mooc.assignments.R;
 import vandy.mooc.assignments.assignment.activities.GalleryActivity;
+import vandy.mooc.assignments.framework.utils.CacheUtils;
+import vandy.mooc.assignments.framework.utils.FileUtils;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.clearText;
@@ -71,7 +73,6 @@ public class ApplicationTestBase extends EspressoTestBase {
      * assignment (from the @Before handler).
      */
     protected void setAssignmentRunner(int assignment) {
-        // TODO: MIKE See if need this now
 //        AssignmentUtils.setAssignment(
 //                InstrumentationRegistry.getTargetContext(), assignment);
 //
@@ -130,12 +131,11 @@ public class ApplicationTestBase extends EspressoTestBase {
      */
     protected void clearImageCache() {
         // First silently clear any existing cached images.
-
-        // TODO: MIKE, FIX THIS
-//        try {
+        try {
+            FileUtils.deleteDirectory(getContext(), CacheUtils.getCacheDirPathName(getContext()));
 //            Utils.deleteDirectory(Utils.getImageDirectory(getContext()));
-//        } catch (Exception ignored) {
-//        }
+        } catch (Exception ignored) {
+        }
     }
 
     /**

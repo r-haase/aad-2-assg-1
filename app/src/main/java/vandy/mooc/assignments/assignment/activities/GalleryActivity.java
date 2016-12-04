@@ -21,29 +21,8 @@ import vandy.mooc.assignments.framework.utils.ViewUtils;
  * use Intents to communicate between activities (in the assignments case
  * between the MainActivity and this GalleryActivity).
  * <p/>
- * Assignment 1:
- * <p/>
- * In assignment 1, the MainActivity constructs a starting intent containing the
- * displayed list of remote image URLs and then uses this intent to start this
- * GalleryActivity. This activity is the required to ...
- * <p/>
- * Assignment 2:
- * <p/>
- * In assignment 2, the MainActivity constructs a starting intent containing the
- * displayed list of remote image URLs and then uses this intent to start this
- * GalleryActivity "for results". This activity is the required to ...
- * <p/>
- * Assignment 3:
- * <p/>
- * In assignment 3, the MainActivity constructs a starting intent containing the
- * displayed list of remote image URLs and then uses this intent to start this
- * GalleryActivity "for results". This activity is the required to ...
- * <p/>
- * Assignment 4:
- * <p/>
- * In assignment 4, the MainActivity constructs a starting intent containing the
- * displayed list of remote image URLs and then uses this intent to start this
- * GalleryActivity "for results". This activity is the required to ...
+ * MainActivity constructs a starting intent containing the displayed list of
+ * remote image URLs and then uses this intent to start this GalleryActivity.
  */
 public class GalleryActivity
         extends GalleryActivityBase {
@@ -83,9 +62,7 @@ public class GalleryActivity
         // TODO - you fill in here.
 		
 
-        // Create a new intent for starting this activity
-        // using the passed context along with the class identifier
-        // for this class.
+        // Return the intent.
         // TODO - you fill in here.
 		
     }

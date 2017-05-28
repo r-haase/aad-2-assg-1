@@ -43,7 +43,10 @@ public class GalleryActivity
      * Factory method that creates and returns an explicit intent that can be
      * used to start this activity.
      *
-     * @param context   The context of the calling activity
+     * @param context   The context of the calling activity. Note: Activity 
+     *                  inherits from Context, so you can pass an Activity into
+     *                  this method. Easiest way to pass a running Activity's 
+     *                  reference is to call 'this' from within that Activity.
      * @param inputUrls A list list of input URLs to include as intent extras.
      * @return An intent that can be used to start this activity
      */
@@ -53,6 +56,8 @@ public class GalleryActivity
         // Create a new intent for starting this activity
         // using the passed context along with the class identifier
         // for this class.
+        // See this guide if you have any difficulties.
+        // https://developer.android.com/training/basics/firstapp/starting-activity.html
         // TODO - you fill in here.
 		
 

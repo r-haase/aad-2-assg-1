@@ -6,7 +6,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.util.Log;
+import android.webkit.URLUtil;
 
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -59,17 +61,18 @@ public class GalleryActivity
         // See this guide if you have any difficulties.
         // https://developer.android.com/training/basics/firstapp/starting-activity.html
         // TODO - you fill in here.
-		
+		Intent intent = new Intent(context, GalleryActivity.class);
 
         // Put the received list of input URLs as an intent
         // use putParcelableArrayListExtra(String, ArrayList<Uri>) on the intent
         // using the predefined INTENT_EXTRA_URLS extra name.
         // TODO - you fill in here.
-		
+        intent.putParcelableArrayListExtra(INTENT_EXTRA_URLS, inputUrls);
+
 
         // Return the intent.
         // TODO - you fill in here.
-		
+        return intent;
     }
 
     /*
@@ -95,6 +98,8 @@ public class GalleryActivity
             // starting intent and pass these URLs into the super class using
             // the setItems() helper method.
             // TODO - you fill in here.
+            List<Uri> list = extractInputUrlsFromIntent(this.getIntent());
+            super.setItems(list);
 			
         } else {
             // The activity is being recreated after configuration change.
@@ -120,7 +125,9 @@ public class GalleryActivity
         // validateInput() helper method. If the entire list of received URLs
         // are valid, then return this list. Otherwise return null.
         // TODO - you fill in here.
-		
+        ArrayList<Uri> list = intent.getParcelableArrayListExtra(INTENT_EXTRA_URLS);
+        if(validateInput(list)) return list;
+        return null;
     }
 
     /**
@@ -147,11 +154,24 @@ public class GalleryActivity
         // Return true if all the URLs are valid.
 
         // TODO - you fill in here.
-		
-
+        boolean allElementsValid = true;
+        if(inputUrls == null) {
+            ViewUtils.showToast(this, "R.string.input_url_list_is_null");
+        }
+        else if(inputUrls.size() == 0) {
+            ViewUtils.showToast(this, "R.string.input_url_list_is_empty");
+        }
+        else {
+		    for(Uri url : inputUrls){
+                boolean checkResult = URLUtil.isValidUrl(url.toString());
+                if(!checkResult) {
+                    allElementsValid = false;
+                }
+            }
+        }
         // Input passed all tests, so return true.
         // TODO - you fill in here.
-		
+		return allElementsValid;
     }
 
     /**

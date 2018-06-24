@@ -59,7 +59,7 @@ public class MainActivity extends MainActivityBase {
     protected void startDownload(ArrayList<Uri> urls) {
         // Start the Gallery Activity with the Uri(s) passed in.
         // TODO - you fill in here.
-		
+        GalleryActivity.makeStartIntent(this, urls);
     }
 
     /**

@@ -51,7 +51,7 @@ public class MainActivity extends MainActivityBase {
     }
 
     /**
-     * Template method hook method required fro starting a download operation.
+     * Template method hook method required for starting a download operation.
      *
      * @param urls list of URLs to download.
      */
